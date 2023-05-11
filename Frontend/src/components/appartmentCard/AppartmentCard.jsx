@@ -1,4 +1,5 @@
 import React from "react";
+import InfosModal from "./infosModal/InfosModal";
 import styles from "./AppartmentCard.module.css";
 
 function AppartmentCard({ appartment }) {
@@ -19,6 +20,8 @@ function AppartmentCard({ appartment }) {
         <p className={styles.price}>
           {appartment.price}€ <span className={styles.perNight}>/night</span>
         </p>
+        <div className="moreInfoContainer"></div>
+        <InfosModal appartment={appartment} />
       </div>
     </div>
   );
