@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.navbar {
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoAndNameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.websiteNameContainer {
+  font-size: 46px;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.linksContainerLeft,
+.linksContainerRight {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.linksContainerLeft {
+  padding-left: 3rem;
+}
+
+.linksContainerRight {
+  padding-right: 3rem;
+}
+
+.navbarLink:link,
+.navbarLink:visited,
+.navbarLink:active {
+  text-decoration: none;
+  color: black;
+  transition: color 0.5s;
+}
+
+.navbarLink:hover {
+  cursor: pointer;
+  color: gray;
+  transition: color 0.2s ease-out;
+}
+
+.menuActive {
+  text-decoration: none;
+  color: black;
+}
+
+.underline {
+  height: 2px;
+  background-color: transparent;
+  width: 0%;
+  transition: width 0.4s, background-color 0.5s;
+  margin: 10px auto 0 auto;
+  border-radius: 50px;
+}
+
+.menuActive .underline {
+  width: 80%;
+  background-color: black;
+}
+
+.navbarLink:hover .underline {
+  width: 80%;
+  background-color: black;
+}
+
+.logoContainer {
+  font-size: 46px;
+  margin: 0;
+}
