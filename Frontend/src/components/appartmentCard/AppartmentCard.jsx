@@ -3,8 +3,6 @@ import InfosModal from "./infosModal/InfosModal";
 import styles from "./AppartmentCard.module.css";
 
 function AppartmentCard({ appartment }) {
-  console.log(appartment);
-
   return (
     <div className={styles.appartmentCard}>
       <div className={styles.appartmentImageContainer}>
@@ -20,8 +18,9 @@ function AppartmentCard({ appartment }) {
         <p className={styles.price}>
           {appartment.price}€ <span className={styles.perNight}>/night</span>
         </p>
-        <div className="moreInfoContainer"></div>
-        <InfosModal appartment={appartment} />
+        <div className={styles.moreInfoContainer}>
+          <InfosModal appartment={appartment} />
+        </div>
       </div>
     </div>
   );
