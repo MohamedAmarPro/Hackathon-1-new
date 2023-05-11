@@ -6,4 +6,8 @@
   background-image: url(../public/Italy\ wallpaper.jpeg);
   font-family: "Raleway", sans-serif;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
