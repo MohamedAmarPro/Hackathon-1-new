@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Home.module.css";
+import styles from "./MyRentals.module.css";
 import appartmentsData from "../data/data.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MyRental from "../components/MyRental/MyRental";
@@ -12,6 +12,7 @@ function MyRentals() {
   return (
     <StyledEngineProvider>
       <div className={styles.home}>
+        <button className={styles.addButton}>Add New Rental</button>
         <div className={styles.appartmentsContainer}>
           <Swiper
             slidesPerView={4}
