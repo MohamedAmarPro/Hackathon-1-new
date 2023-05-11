@@ -1,5 +1,6 @@
+[
+
 {
-    "data" :{
         "id":1,
         "title":"Downtown Naples Botanical Garden",
         "desc": "The studio appartement",
@@ -8,12 +9,12 @@
         "chambers":3,
         "dateEntree":"11/05/2023",
         "dateSortie":"20/05/2023",
-        "city":"Naple",
+        "city":"Naples",
         "images":"https://img.freepik.com/photos-gratuite/conception-appartement-studio-moderne-chambre-espace-vie_1262-12375.jpg?size=626&ext=jpg&uid=R58535683&semt=ais",
         "dispo": true
 
     },
-    "data2":{
+{
         "id":2,
         "title":"Superior One-Bedroom Apartment",
         "desc": "The studio appartement 2",
@@ -26,4 +27,4 @@
         "images":"https://img.freepik.com/photos-gratuite/salon-scandinave-loft-rendu-3d-table-travail-etagere_105762-2162.jpg?size=626&ext=jpg&uid=R58535683&semt=ais",
         "dispo": true
     }
-}
+]

@@ -17,7 +17,12 @@ function Navbar() {
         </NavLink>
       </div>
       <div className={styles.logoAndNameContainer}>
-        <div className={styles.logoContainer}>🇮🇹</div>
+        <div className={styles.logoContainer}>
+          <img
+            src="https://i.postimg.cc/QtVgwW9d/scooter.png"
+            alt="logo-image"
+          ></img>
+        </div>
         <h1 className={styles.websiteNameContainer}>Affita Casa</h1>
       </div>
       <div className={styles.linksContainerRight}>
