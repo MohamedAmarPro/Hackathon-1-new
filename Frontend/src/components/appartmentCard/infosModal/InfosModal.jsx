@@ -56,28 +56,33 @@ export default function InfosModal({ appartment }) {
           onClose={handleClose}
         >
           <div className={styles.cityAndPrice}>
-            <h3 className={styles.modalTitle}>{appartment.title} </h3>
+            <h3 className={styles.modalTitle}>{appartment.title}</h3>
           </div>
         </BootstrapDialogTitle>
         <DialogContent className={styles.dialogContent} dividers>
           <div className={styles.descriptionContainer}>
-            <h4>Description:</h4>
+            <h4 className={styles.descTitle}>Description:</h4>
             <h4 className={styles.modalDesc}>{appartment.desc}</h4>
           </div>
 
           <div className={styles.infosBloc}>
             <div className={styles.infosContainer}>
-              <h4>Price:</h4>
+              <h4 className={styles.descTitle}>Price:</h4>
               <h4 className={styles.chambers}>{appartment.price}€ /night</h4>
             </div>
             <div className={styles.infosContainer}>
-              <h4>Chambers:</h4>
+              <h4 className={styles.descTitle}>Chambers:</h4>
               <h4 className={styles.chambers}>{appartment.chambers}</h4>
             </div>
             <div className={styles.infosContainer}>
-              <h4>Surface:</h4>
+              <h4 className={styles.descTitle}>Surface:</h4>
               <h4 className={styles.surface}>{appartment.surfaces} m2</h4>
             </div>
+          </div>
+          <div>
+            <p className={styles.availableText}>
+              Available from {appartment.dateEntree} to {appartment.dateSortie}
+            </p>
           </div>
         </DialogContent>
       </BootstrapDialog>
