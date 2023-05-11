@@ -39,23 +39,36 @@ export default function InfosModal({ appartment }) {
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
-        className={styles.modalBloc}
+        sx={{
+          "& .MuiDialogTitle-root": {
+            display: "flex",
+            flexDirection: "center",
+            alignItems: "center",
+          },
+          "& .MuiPaper-root": {
+            display: "flex",
+            maxWidth: "100%",
+          },
+        }}
       >
         <BootstrapDialogTitle
           id="customized-dialog-title"
           onClose={handleClose}
         >
           <div className={styles.cityAndPrice}>
-            <div>{appartment.city}</div>
-            <div>{appartment.price}€ /night</div>
+            <h3 className={styles.modalTitle}>{appartment.title} </h3>
           </div>
         </BootstrapDialogTitle>
         <DialogContent className={styles.dialogContent} dividers>
-          <h3 className={styles.modalTitle}>{appartment.title} </h3>
+          <div className={styles.descriptionContainer}>
+            <h4>Description:</h4>
+            <h4 className={styles.modalDesc}>{appartment.desc}</h4>
+          </div>
+
           <div className={styles.infosBloc}>
             <div className={styles.infosContainer}>
-              <h4>Description:</h4>
-              <h4 className={styles.modalDesc}>{appartment.desc}</h4>
+              <h4>Price:</h4>
+              <h4 className={styles.chambers}>{appartment.price}€ /night</h4>
             </div>
             <div className={styles.infosContainer}>
               <h4>Chambers:</h4>
