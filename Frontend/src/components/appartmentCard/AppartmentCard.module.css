@@ -1,0 +1,41 @@
+.appartmentCard {
+  background-color: white;
+  height: 525px;
+  width: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.appartmentImageContainer {
+  width: 300px;
+  height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.appartmentImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.appartmentTitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.perNight {
+  font-weight: 200;
+}
