@@ -8,7 +8,10 @@
 
 .appartmentsContainer {
   margin-top: 5rem;
-  width: 90%;
+  width: 100%;
   height: 70%;
   background-color: rgba(255, 255, 255, 0.796);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
