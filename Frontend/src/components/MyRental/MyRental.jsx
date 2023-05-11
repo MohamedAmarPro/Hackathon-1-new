@@ -1,18 +1,26 @@
 import React from "react";
 import styles from "./MyRental.module.css";
 
-function MyRental({ title, images, city }) {
+function MyRental({ appartment }) {
   return (
-    <div className={styles.generalElementsMyRentals}>
-      <div className={styles.elementsMyRentals}>
-        <h1 className={styles.titleMyRental}>{title}</h1>
-        <img className={styles.imageMyRental} src={images}></img>
-        <h2 className={styles.cityMyRental}>{city}</h2>
+    <div className={styles.appartmentCard}>
+      <div className={styles.appartmentImageContainer}>
+        <img
+          className={styles.appartmentImage}
+          src={appartment.images}
+          alt=""
+        />
       </div>
-
-      <div className={styles.buttonsMyRental}>
-        <button className={styles.updateMyRental}>update</button>
-        <button className={styles.deleteMyRental}>delete</button>
+      <div className={styles.appartmentInfosContainer}>
+        <h3 className={styles.city}>{appartment.city}</h3>
+        <h4 className={styles.appartmentTitle}>{appartment.title}</h4>
+        <p className={styles.price}>
+          {appartment.price}€ <span className={styles.perNight}>/night</span>
+        </p>
+        <div className={styles.buttonsContainer}>
+          <button className={styles.editButton}>Edit</button>
+          <button className={styles.deleteButton}>Delete</button>
+        </div>
       </div>
     </div>
   );
