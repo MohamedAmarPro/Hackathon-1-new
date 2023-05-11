@@ -33,7 +33,7 @@ export default function InfosModal({ appartment }) {
         type="button"
         onClick={handleClickOpen}
       >
-        &#40;More info&#41;
+        &#40;Click here for more info&#41;
       </button>
       <BootstrapDialog
         onClose={handleClose}
