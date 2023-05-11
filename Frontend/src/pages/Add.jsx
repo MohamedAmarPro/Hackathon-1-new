@@ -38,6 +38,8 @@ const Add = () => {
   return (
     <>
       <div className="form">
+        <form action="/userAppartment" >
+
         <h1>Add new Appartment</h1>
         <input
           type="text"
@@ -88,7 +90,7 @@ const Add = () => {
           name="city"
         />
         <input
-          type="text"
+          type="file"
           placeholder="images"
           onChange={handleChange}
           name="images"
@@ -102,6 +104,7 @@ const Add = () => {
         <button className="formButton" onClick={handleClick}>
           Add
         </button>
+        </form>
       </div>
     </>
   );

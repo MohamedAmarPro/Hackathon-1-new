@@ -1,7 +1,8 @@
 import express from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
-import cors from "cors";
+import cors from "cors"; 
+import multer from "multer";
 
 dotenv.config();
 
@@ -9,6 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+const storage = multer.diskStorage
 
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
