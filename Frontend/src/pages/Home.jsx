@@ -6,28 +6,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import { StyledEngineProvider } from "@mui/material/styles";
 
 function Home() {
   return (
-    <div className={styles.home}>
-      <div className={styles.appartmentsContainer}>
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={20}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          {appartmentsData.map((appartment) => (
-            <SwiperSlide>
-              <AppartmentCard key={appartment.id} appartment={appartment} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <StyledEngineProvider>
+      <div className={styles.home}>
+        <div className={styles.appartmentsContainer}>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={20}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {appartmentsData.map((appartment) => (
+              <SwiperSlide>
+                <AppartmentCard key={appartment.id} appartment={appartment} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
-    </div>
+    </StyledEngineProvider>
   );
 }
 
