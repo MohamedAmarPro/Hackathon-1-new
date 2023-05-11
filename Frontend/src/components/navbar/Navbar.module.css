@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .navbar {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 120px;
   background-color: white;
