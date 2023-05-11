@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles.projectName}>Hackathon#1 for Wild Code School</div>
       <a
         className={styles.aContainer}
-        href="https://github.com/Romain-Constant"
+        href="https://github.com/Romain-Constant/Hackathon-1"
         target="_blank"
         rel="noreferrer"
       >
