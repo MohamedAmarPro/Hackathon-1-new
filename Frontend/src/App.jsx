@@ -5,8 +5,8 @@ import Navbar from "../src/components/navbar/Navbar";
 import styles from "./App.module.css";
 import Footer from "../src/components/footer/Footer";
 import Add from "./pages/Add";
-import MyRentals from "./pages/MyRentals";
 import Update from "./pages/Update";
+import Rentals from "./pages/Rentals";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Footer />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/myrentals" element={<MyRentals/>}/>
+          <Route path="/myrentals" element={<Rentals/>}/>
           <Route path="/add"  element={<Add/>}/>
           <Route path="/update/:id"element={<Update/>}/>
         </Routes>
