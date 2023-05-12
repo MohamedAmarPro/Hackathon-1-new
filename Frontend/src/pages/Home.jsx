@@ -11,6 +11,19 @@ import { Pagination } from "swiper";
 
 function Home() {
   const [apppartment, setApppartment] = useState([]);
+  const [userInput, setUserInput] = useState("");
+  const [searchBarre, setSearchBarre] = useState("");
+  const [appartmentsFiltered, setAppartmentsFiltered] = useState([""]);
+
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    setUserInput(value);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    setSearchBarre(userInput.toLowerCase());
+  };
 
   useEffect(() => {
     const fectchAllAppartment = async () => {
@@ -23,11 +36,33 @@ function Home() {
     };
     fectchAllAppartment();
   }, []);
-  console.log(apppartment);
+
+  useEffect(() => {
+    setAppartmentsFiltered(
+      apppartment.filter(
+        (appartment) => appartment.city.toLowerCase() === searchBarre
+      )
+    );
+  }, [searchBarre]);
 
   return (
     <StyledEngineProvider>
       <div className={styles.home}>
+        <div className={styles.searchBarreContainer}>
+          <form className={styles.searchBarre} onSubmit={handleFormSubmit}>
+            <input
+              type="text"
+              placeholder="Search city..."
+              className={styles.placeHolderSearch}
+              value={userInput}
+              onChange={handleInputChange}
+              id="dkofhof"
+            />
+            {/* <button className={styles.buttonSearch} type="submit">
+              Rechercher
+            </button> */}
+          </form>
+        </div>
         <div className={styles.appartmentsContainer}>
           <Swiper
             slidesPerView={4}
@@ -38,14 +73,17 @@ function Home() {
             modules={[Pagination]}
             className="mySwiper"
           >
-            {apppartment.map((appartment) => (
-              <SwiperSlide>
-                <AppartmentCard
-                  key={`id_${appartment.id}`}
-                  appartment={appartment}
-                />
-              </SwiperSlide>
-            ))}
+            {searchBarre !== ""
+              ? appartmentsFiltered.map((appartment) => (
+                  <SwiperSlide key={`id__${appartment.id}`}>
+                    <AppartmentCard appartment={appartment} />
+                  </SwiperSlide>
+                ))
+              : apppartment.map((appartment) => (
+                  <SwiperSlide key={`id___${appartment.id}`}>
+                    <AppartmentCard appartment={appartment} />
+                  </SwiperSlide>
+                ))}
           </Swiper>
         </div>
       </div>
