@@ -51,6 +51,8 @@ h4 {
 
 .descTitle {
   margin: 2rem 0 1rem 0;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .cityAndPrice {
@@ -58,20 +60,20 @@ h4 {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  font-size: 26px;
   font-weight: 400;
   width: 100%;
 }
 
 .modalTitle {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 400;
+  margin: 1rem;
 }
 
 .modalDesc,
 .chambers,
 .surface {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   text-align: center;
   margin-bottom: 2rem;
@@ -80,4 +82,8 @@ h4 {
 .availableText {
   font-size: 20px;
   font-weight: 200;
+}
+
+.dateSpan {
+  font-weight: 500;
 }

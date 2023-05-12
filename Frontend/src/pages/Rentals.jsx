@@ -30,11 +30,13 @@ function Rentals() {
     <StyledEngineProvider>
       <div className={styles.home}>
         <button className={styles.addButton}>
-          <Link to="/add">Add New Rental</Link>
+          <Link to="/add" className={styles.addLink}>
+            Add New Rental
+          </Link>
         </button>
         <div className={styles.appartmentsContainer}>
           <Swiper
-            slidesPerView={4}
+            slidesPerView={apppartment.length < 4 ? apppartment.length : 4}
             spaceBetween={30}
             pagination={{
               clickable: true,

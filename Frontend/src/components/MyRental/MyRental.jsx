@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function MyRental({ appartment }) {
-
   const handleDelete = async (id) => {
     try {
-      await axios.delete("http://localhost:8800/"+id);
+      await axios.delete("http://localhost:8800/" + id);
       window.location.reload();
     } catch (err) {
       console.log(err);
@@ -20,7 +19,11 @@ function MyRental({ appartment }) {
       <div className={styles.appartmentImageContainer}>
         <img
           className={styles.appartmentImage}
-          src={appartment.images === "" ? "../../../public/No_image_available.svg.png" : appartment.images}  
+          src={
+            appartment.images === ""
+              ? "../../../public/No_image_available.svg.png"
+              : appartment.images
+          }
           alt=""
         />
       </div>
@@ -31,11 +34,16 @@ function MyRental({ appartment }) {
           {appartment.price}€ <span className={styles.perNight}>/night</span>
         </p>
         <div className={styles.buttonsContainer}>
-          <button className={styles.editButton} onClick={() => handleDelete(appartment.id)}>
-          Delete
-          </button>
           <button className={styles.editButton}>
-          <Link to={`/update/${appartment.id}`}>Update</Link>
+            <Link to={`/update/${appartment.id}`} className={styles.updateLink}>
+              Update
+            </Link>
+          </button>
+          <button
+            className={styles.deleteButton}
+            onClick={() => handleDelete(appartment.id)}
+          >
+            Delete
           </button>
         </div>
       </div>

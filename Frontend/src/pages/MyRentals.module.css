@@ -12,11 +12,20 @@
   cursor: pointer;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   border: none;
   border-radius: 25px;
   padding: 0.7rem 2rem;
   background-color: white;
+}
+
+.addButton:hover {
+  background-color: rgb(215, 215, 215);
+}
+
+.addLink {
+  text-decoration: none;
+  color: black;
 }
 
 .appartmentsContainer {
