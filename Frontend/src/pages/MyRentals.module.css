@@ -11,9 +11,9 @@
   margin-top: 3rem;
   cursor: pointer;
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  border: solid 0.5px gray;
   border-radius: 25px;
   padding: 0.7rem 2rem;
   background-color: white;

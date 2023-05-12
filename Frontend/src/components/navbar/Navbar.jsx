@@ -5,16 +5,19 @@ import styles from "./Navbar.module.css";
 function Navbar() {
   return (
     <div className={styles.navbar}>
-      <div className={styles.logoAndNameContainer}>
-        <div className={styles.logoContainer}>
-          <img
-            className={styles.logo}
-            src="../../../public/coliseum.png"
-            alt="logo-image"
-          ></img>
+      <NavLink to="/" className={styles.logoLink}>
+        <div className={styles.logoAndNameContainer}>
+          <div className={styles.logoContainer}>
+            <img
+              className={styles.logo}
+              src="../../../public/coliseum.png"
+              alt="logo-image"
+            ></img>
+          </div>
+          <h1 className={styles.websiteNameContainer}>Affita Casa</h1>
         </div>
-        <h1 className={styles.websiteNameContainer}>Affita Casa</h1>
-      </div>
+      </NavLink>
+
       <div className={styles.linksContainer}>
         <div className={styles.linksContainerLeft}>
           <NavLink

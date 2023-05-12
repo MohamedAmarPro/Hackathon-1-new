@@ -44,11 +44,13 @@ function Rentals() {
             modules={[Pagination]}
             className="mySwiper"
           >
-            {apppartment.map((appartment) => (
-              <SwiperSlide>
-                <MyRental key={appartment.id} appartment={appartment} />
-              </SwiperSlide>
-            ))}
+            {apppartment
+              .map((appartment) => (
+                <SwiperSlide>
+                  <MyRental key={appartment.id} appartment={appartment} />
+                </SwiperSlide>
+              ))
+              .sort(() => Math.random() - 0.5)}
           </Swiper>
         </div>
       </div>
