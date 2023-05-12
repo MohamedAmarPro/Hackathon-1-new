@@ -8,7 +8,11 @@ function AppartmentCard({ appartment }) {
       <div className={styles.appartmentImageContainer}>
         <img
           className={styles.appartmentImage}
-          src={appartment.images}
+          src={
+            appartment.images === ""
+              ? "../../../public/No_image_available.svg.png"
+              : appartment.images
+          }
           alt=""
         />
       </div>

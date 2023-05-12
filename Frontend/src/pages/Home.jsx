@@ -11,6 +11,8 @@ import { Pagination } from "swiper";
 
 function Home() {
   const [apppartment, setApppartment] = useState([]);
+  const [rentals, setRentals] = useState([]);
+  const [massiveAppartments, setmassiveAppartments] = useState([]);
   const [userInput, setUserInput] = useState("");
   const [searchBarre, setSearchBarre] = useState("");
   const [appartmentsFiltered, setAppartmentsFiltered] = useState([""]);
@@ -35,15 +37,31 @@ function Home() {
       }
     };
     fectchAllAppartment();
+
+    const fectchAllRentals = async () => {
+      try {
+        const response = await axios.get("http://localhost:8800/myrentals");
+        setRentals(response.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fectchAllRentals();
   }, []);
 
   useEffect(() => {
+    setmassiveAppartments([...apppartment, ...rentals]);
+  }, [apppartment]);
+
+  useEffect(() => {
     setAppartmentsFiltered(
-      apppartment.filter(
+      massiveAppartments.filter(
         (appartment) => appartment.city.toLowerCase() === searchBarre
       )
     );
   }, [searchBarre]);
+
+  console.log(massiveAppartments);
 
   return (
     <StyledEngineProvider>
@@ -79,8 +97,8 @@ function Home() {
                     <AppartmentCard appartment={appartment} />
                   </SwiperSlide>
                 ))
-              : apppartment.map((appartment) => (
-                  <SwiperSlide key={`id___${appartment.id}`}>
+              : massiveAppartments.map((appartment) => (
+                  <SwiperSlide key={`${appartment.title} - ${appartment.id}`}>
                     <AppartmentCard appartment={appartment} />
                   </SwiperSlide>
                 ))}
