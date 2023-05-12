@@ -97,11 +97,13 @@ function Home() {
                     <AppartmentCard appartment={appartment} />
                   </SwiperSlide>
                 ))
-              : massiveAppartments.map((appartment) => (
-                  <SwiperSlide key={`${appartment.title} - ${appartment.id}`}>
-                    <AppartmentCard appartment={appartment} />
-                  </SwiperSlide>
-                ))}
+              : massiveAppartments
+                  .map((appartment) => (
+                    <SwiperSlide key={`${appartment.title} - ${appartment.id}`}>
+                      <AppartmentCard appartment={appartment} />
+                    </SwiperSlide>
+                  ))
+                  .sort(() => Math.random() - 0.5)}
           </Swiper>
         </div>
       </div>
