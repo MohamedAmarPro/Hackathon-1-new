@@ -8,6 +8,7 @@ import styles from "./Home.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import "./style.css";
 
 function Home() {
   const [apppartment, setApppartment] = useState([]);
