@@ -7,7 +7,11 @@ function MyRental({ appartment }) {
       <div className={styles.appartmentImageContainer}>
         <img
           className={styles.appartmentImage}
-          src={appartment.images}
+          src={
+            appartment.images === null
+              ? "../../../public/No_image_available.svg.png"
+              : appartment.images
+          }
           alt=""
         />
       </div>
