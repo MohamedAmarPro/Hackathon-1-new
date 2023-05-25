@@ -6,7 +6,6 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <div className={styles.projectName}>Hackathon#1 for Wild Code School</div>
       <a
         className={styles.aContainer}
         href="https://github.com/Romain-Constant/Hackathon-1"
@@ -15,8 +14,9 @@ const Footer = () => {
       >
         <BsGithub className={styles.githubIcon} />
       </a>
+      <div className={styles.projectName}>Hackathon#1 for Wild Code School</div>
 
-      <div className={styles.aboutUs}>About us</div>
+      {/* <div className={styles.aboutUs}>About us</div> */}
       <FaJsSquare />
       <FaReact />
       <FaNodeJs />

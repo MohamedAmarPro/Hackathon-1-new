@@ -18,7 +18,14 @@
   align-items: center;
   justify-content: center;
   padding-left: 3rem;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.logoLink:link,
+.logoLink:visited,
+.logoLink:active {
+  text-decoration: none;
+  color: black;
 }
 
 .logo {

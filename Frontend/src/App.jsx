@@ -4,7 +4,9 @@ import Home from "./pages/Home";
 import Navbar from "../src/components/navbar/Navbar";
 import styles from "./App.module.css";
 import Footer from "../src/components/footer/Footer";
-import MyRentals from "./pages/MyRentals";
+import Add from "./pages/Add";
+import Update from "./pages/Update";
+import Rentals from "./pages/Rentals";
 
 function App() {
   return (
@@ -14,10 +16,9 @@ function App() {
         <Footer />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/myrentals" element={<MyRentals/>}/>
-          <Route path="/add" />
-          <Route path="/update" />
-          <Route path="/delete" />
+          <Route path="/myrentals" element={<Rentals/>}/>
+          <Route path="/add"  element={<Add/>}/>
+          <Route path="/update/:id"element={<Update/>}/>
         </Routes>
       </div>
     </Router>

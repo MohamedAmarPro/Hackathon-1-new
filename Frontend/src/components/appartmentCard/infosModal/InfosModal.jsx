@@ -81,7 +81,14 @@ export default function InfosModal({ appartment }) {
           </div>
           <div>
             <p className={styles.availableText}>
-              Available from {appartment.dateEntree} to {appartment.dateSortie}
+              Available from{" "}
+              <span className={styles.dateSpan}>
+                {appartment.dateEntree.substring(0, 10)}
+              </span>{" "}
+              to{" "}
+              <span className={styles.dateSpan}>
+                {appartment.dateSortie.substring(0, 10)}
+              </span>
             </p>
           </div>
         </DialogContent>
