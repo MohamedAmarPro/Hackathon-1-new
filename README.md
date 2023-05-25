@@ -9,4 +9,4 @@ The team was composed of Mohamed, Alexandre and me.
 
 Sadly we did not get the time to fully integrate the possibility of images uploading when an appartment is added but wr are pretty happy with the result.
 
-[!Screenshot](./Frontend/public/Hackathon_1_screenshot.png)
+![Screenshot](./Frontend/public/Hackathon_1_screenshot.png)
